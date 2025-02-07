@@ -1,4 +1,6 @@
 
+// By: mathewn24
+
 #include <stdio.h>
 
 /* Macros used to represent the state of each square */
@@ -13,7 +15,6 @@ void initGameBoard(int gameBoard[6][7]) {
             gameBoard[i][j] = EMPTY;
         }   
     }
-
 }
 
 /* Display the game board on the screen.*/
@@ -55,7 +56,6 @@ void placeMarkByHumanPlayer(int gameBoard[6][7], int *mark) {
             printf("Colum is full. Please input again:");
             scanf("%d", mark);
         }
-            
 }
 
 /* Return 1 if there is a winner.*/
