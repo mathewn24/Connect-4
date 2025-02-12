@@ -46,16 +46,16 @@ void printGameBoard(int gameBoard[6][7]) {
 
 /* Ask the human player to place the mark.*/
 void placeMarkByHumanPlayer(int gameBoard[6][7], int *mark) {
-        printf("Enter a column (1-7): ");
+    printf("Enter a column (1-7): ");
+    scanf("%d", mark);
+    while (*mark < 1 || *mark > 7) {
+        printf("Input out of range. Please input again: ");
         scanf("%d", mark);
-        while (*mark < 1 || *mark > 7) {
-            printf("Input out of range. Please input again: ");
-            scanf("%d", mark);
-        }
-        while (gameBoard[0][*mark-1] != EMPTY) {
-            printf("Colum is full. Please input again:");
-            scanf("%d", mark);
-        }
+    }
+    while (gameBoard[0][*mark-1] != EMPTY) {
+        printf("Colum is full. Please input again:");
+        scanf("%d", mark);
+    }
 }
 
 /* Return 1 if there is a winner.*/
